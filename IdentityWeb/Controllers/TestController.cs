@@ -64,7 +64,7 @@ namespace IdentityWeb.Controllers
             string pwd = res.password;
             
             var user =await userManager.FindByNameAsync(name);
-            await userManager.ResetAccessFailedCountAsync(user);
+
             if (user == null )
             {
                 return BadRequest("用户不存在");
@@ -85,6 +85,44 @@ namespace IdentityWeb.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<ActionResult> SendResetPasswordToken(string username)
+        {
+            var user = await userManager.FindByNameAsync(username);
+            if (user == null)
+            {
+                return BadRequest("用户不存在");
+
+            }
+           string token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            Console.WriteLine(token);
+
+            return Ok("ok");
+
+        }
+        [HttpPut]
+        public async Task<ActionResult> ResetPassword(string name,string token,string newPassword)
+        {
+            var user = await userManager.FindByNameAsync(name);
+
+            if(user == null)
+            {
+                return BadRequest("用户名不存在");
+            }
+            var result = await userManager.ResetPasswordAsync(user,token,newPassword);
+            if (result.Succeeded)
+            {
+                await userManager.ResetAccessFailedCountAsync(user);
+
+                return Ok("密码重置成功");
+            }
+            else
+            {
+                await userManager.AccessFailedAsync(user);
+                return BadRequest("密码重置失败");
+            }
+        }
 
     }
 }

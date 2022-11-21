@@ -124,5 +124,11 @@ namespace IdentityWeb.Controllers
             }
         }
 
+        [HttpPost]
+        public ActionResult<string> Test3(ModelShared model)
+        {
+            return Ok("6");
+        }
+
     }
 }

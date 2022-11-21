@@ -46,6 +46,8 @@ namespace IdentityWeb
             builder.Services.AddFluentValidation(opt =>
             {
                 opt.RegisterValidatorsFromAssembly(Assembly.GetEntryAssembly());
+                opt.AutomaticValidationEnabled = true;
+                
             });
             var app = builder.Build();
 

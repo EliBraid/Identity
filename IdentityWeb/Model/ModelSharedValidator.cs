@@ -10,7 +10,7 @@ namespace IdentityWeb.Model
         public ModelSharedValidator(UserManager<MyUser> userManager)
         {
 
-            RuleFor(x => x.Name).NotNull().Length(0, 10).MustAsync(async (x,_) => await userManager.FindByNameAsync(x)==null)
+             RuleFor(x => x.Name).NotNull().Length(0, 10).Must(x => userManager.FindByNameAsync(x).Result == null)
                 .WithMessage("用户名已经存在了");
         }
     }

@@ -5,7 +5,11 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity", "Identity\Identity.csproj", "{C56CFF1E-BE28-49F4-A505-C925364E4966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityWeb", "IdentityWeb\IdentityWeb.csproj", "{D3E8A6AD-055B-456E-86BA-A1C93F7D7D54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityWeb", "IdentityWeb\IdentityWeb.csproj", "{D3E8A6AD-055B-456E-86BA-A1C93F7D7D54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT", "JWT\JWT.csproj", "{93500359-339B-4BF7-8A10-D3C2D74D7A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWPConsole", "JWPConsole\JWPConsole.csproj", "{046036F5-FC58-48AD-93A2-1CDA6DD8022B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D3E8A6AD-055B-456E-86BA-A1C93F7D7D54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E8A6AD-055B-456E-86BA-A1C93F7D7D54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E8A6AD-055B-456E-86BA-A1C93F7D7D54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93500359-339B-4BF7-8A10-D3C2D74D7A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93500359-339B-4BF7-8A10-D3C2D74D7A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93500359-339B-4BF7-8A10-D3C2D74D7A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93500359-339B-4BF7-8A10-D3C2D74D7A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{046036F5-FC58-48AD-93A2-1CDA6DD8022B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046036F5-FC58-48AD-93A2-1CDA6DD8022B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046036F5-FC58-48AD-93A2-1CDA6DD8022B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046036F5-FC58-48AD-93A2-1CDA6DD8022B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

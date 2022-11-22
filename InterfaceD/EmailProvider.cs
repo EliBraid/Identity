@@ -11,5 +11,7 @@ namespace InterfaceD
         public IEnumerable<EmailInfo> SendEmail();
 
         public IEnumerable<EmailInfo> Send2Email();
+
+        public IEnumerable<EmailInfo> Send3Email();
     }
 }

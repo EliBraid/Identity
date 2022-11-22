@@ -8,6 +8,8 @@ namespace InterfaceD
 {
     public interface EmailProvider
     {
-        public IEnumerable<EmailInfo> SendEmail(); 
+        public IEnumerable<EmailInfo> SendEmail();
+
+        public IEnumerable<EmailInfo> Send2Email();
     }
 }

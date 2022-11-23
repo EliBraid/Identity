@@ -17,6 +17,7 @@ namespace Identity
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<House>().Property(h => h.Owner).IsConcurrencyToken();
             modelBuilder.Entity<House>().HasData(
                 new House
                 {

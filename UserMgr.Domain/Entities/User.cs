@@ -1,9 +1,9 @@
 ﻿using Catel;
 using UserMgr.Domain.ValueObject;
 
-namespace UserMgr.Domain
+namespace UserMgr.Domain.Entities
 {
-    public record User:IAggregateRoot
+    public record User : IAggregateRoot
     {
         public Guid Id { get; set; }
 
@@ -21,9 +21,9 @@ namespace UserMgr.Domain
 
         public User(PhoneNumber phoneNumber)
         {
-            this.PhoneNumber = phoneNumber;
-            this.Id = Guid.NewGuid();
-            this.UserAccessFail = new UserAccessFail(this);
+            PhoneNumber = phoneNumber;
+            Id = Guid.NewGuid();
+            UserAccessFail = new UserAccessFail(this);
         }
 
         public bool HasPassword()
@@ -32,11 +32,11 @@ namespace UserMgr.Domain
         }
         public string ChangePassword(string password)
         {
-            if(password.Length <= 3)
+            if (password.Length <= 3)
             {
                 throw new ArgumentOutOfRangeException("密码长度必须大于3");
             }
-            this.passwordHash = HashHelper
+            passwordHash = HashHelper
         }
 
     }

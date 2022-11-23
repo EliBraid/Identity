@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserMgr.Domain
 {
-    internal interface IAggregateRoot
+    internal interface IUserRepository
     {
     }
 }

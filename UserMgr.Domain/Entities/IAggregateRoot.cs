@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UserMgr.Domain
+namespace UserMgr.Domain.Entities
 {
-    internal class UserAccessFail
+    internal interface IAggregateRoot
     {
     }
 }
